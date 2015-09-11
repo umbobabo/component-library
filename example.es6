@@ -8,8 +8,16 @@ import ImageCaptionPackage from '@economist/component-imagecaption/package';
 import Icon from '@economist/component-icon';
 import IconPackage from '@economist/component-icon/package';
 
+import Palette from '@economist/component-palette/index.js';
+import PalettePackage from '@economist/component-palette/package';
+import PaletteExample from '@economist/component-palette/example.js';
+
 export default (
   <Library>
+    <Component metadata={PalettePackage} component={Palette}>
+      {PaletteExample}
+    </Component>
+
     <Component
       metadata={ImageCaptionPackage}
       component={ImageCaption}

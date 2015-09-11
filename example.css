@@ -1,3 +1,6 @@
 @import './index.css';
 
 @import '@economist/component-icon';
+@import '@economist/component-palette';
+@import '@economist/component-palette/example.css';
+@import '@economist/component-masthead';
