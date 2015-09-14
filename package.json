@@ -15,8 +15,12 @@
     "!karma.conf.js",
     "!testbundle.js"
   ],
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "babel": {
-    "sourceMaps": "inline",
     "stage": 0,
     "loose": "all",
     "compact": false
@@ -107,13 +111,13 @@
     "lint": "eslint $npm_package_config_lint_opts .",
     "pages": "git stash save -u pages-stash && git branch -D gh-pages; git checkout --orphan gh-pages && git add -f $npm_package_config_ghpages_files && git commit -anm'ghpages' && git push origin HEAD:gh-pages -f",
     "prepages": "npm run build && npm run doc",
-    "prepublish": "babel . -d . -x .es6 && npm run serve",
+    "prepublish": "babel . -d . -x .es6",
     "prepublish:watch": "npm run prepublish -- -w",
     "pretest": "npm run lint",
     "provision": "devpack-configure ./package.json",
     "serve": "browser-sync start --server --files '*.{html,js}'",
     "test": "karma start",
-    "watch": "parallelshell 'npm run doc:watch' 'npm run prepublish:watch'"
+    "watch": "parallelshell 'npm run doc:watch' 'npm run prepublish:watch' 'npm run serve'"
   },
   "dependencies": {
     "@economist/component-icon": "^3.0.7",
@@ -126,6 +130,7 @@
   "devDependencies": {
     "@economist/component-devpack": "latest",
     "babel": "^5.8.23",
+    "babelify": "^6.3.0",
     "browser-sync": "^2.8.2",
     "browserify": "^11.0.1",
     "chai": "^3.2.0",

@@ -5,16 +5,12 @@ import Component from './library-component';
 import ImageCaption from '@economist/component-imagecaption';
 import ImageCaptionPackage from '@economist/component-imagecaption/package';
 
-// import Icon from '@economist/component-icon';
-// import IconPackage from '@economist/component-icon/package';
-// import IconExample from '@economist/component-icon/example.js';
+import Icon from '@economist/component-icon';
+import IconPackage from '@economist/component-icon/package';
 
 import Palette from '@economist/component-palette/index.js';
 import PalettePackage from '@economist/component-palette/package';
 import PaletteExample from '@economist/component-palette/example.js';
-
-// import Footer from '@economist/component-footer/index.js';
-// import FooterPackage from '@economist/component-footer/package';
 
 export default (
   <Library>
@@ -46,12 +42,27 @@ export default (
       }}
     />
 
-    // <Component metadata={IconPackage} component={Icon}>
-    //   {IconExample}
-    // </Component>
-
-    // <Component metadata={FooterPackage} component={Footer}>
-    //   <Footer />
-    // </Component>
+    <Component metadata={IconPackage} component={Icon}>
+      <Icon icon="facebook" />
+      <Icon icon="twitter" />
+      <Icon icon="googleplus" />
+      <Icon icon="linkedin" />
+      <Icon icon="whatsapp" />
+      <Icon icon="mail" />
+      <Icon icon="rss" />
+      <Icon icon="down" />
+      <Icon icon="up" />
+      <Icon icon="right" />
+      <Icon icon="left" />
+      <Icon icon="close" />
+      <Icon icon="worldif" />
+      <Icon icon="home" />
+      <Icon icon="hamburger" />
+      <Icon icon="user" />
+      <Icon icon="magnifier" />
+      <Icon icon="share" />
+      <Icon icon="economist-small"/>
+      <Icon icon="economist"/>
+    </Component>
   </Library>
 );
