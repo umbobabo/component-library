@@ -124,7 +124,7 @@
     "react-simpletabs": "^0.6.1"
   },
   "devDependencies": {
-    "@economist/component-devpack": "^3.0.0",
+    "@economist/component-devpack": "latest",
     "babel": "^5.8.23",
     "browser-sync": "^2.8.2",
     "browserify": "^11.0.1",

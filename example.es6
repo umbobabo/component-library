@@ -5,12 +5,16 @@ import Component from './library-component';
 import ImageCaption from '@economist/component-imagecaption';
 import ImageCaptionPackage from '@economist/component-imagecaption/package';
 
-import Icon from '@economist/component-icon';
-import IconPackage from '@economist/component-icon/package';
+// import Icon from '@economist/component-icon';
+// import IconPackage from '@economist/component-icon/package';
+// import IconExample from '@economist/component-icon/example.js';
 
 import Palette from '@economist/component-palette/index.js';
 import PalettePackage from '@economist/component-palette/package';
 import PaletteExample from '@economist/component-palette/example.js';
+
+// import Footer from '@economist/component-footer/index.js';
+// import FooterPackage from '@economist/component-footer/package';
 
 export default (
   <Library>
@@ -42,9 +46,12 @@ export default (
       }}
     />
 
-    <Component metadata={IconPackage} component={Icon}>
-      <Icon icon="share"/>
-      <Icon icon="facebook"/>
-    </Component>
+    // <Component metadata={IconPackage} component={Icon}>
+    //   {IconExample}
+    // </Component>
+
+    // <Component metadata={FooterPackage} component={Footer}>
+    //   <Footer />
+    // </Component>
   </Library>
 );

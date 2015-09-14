@@ -35,10 +35,11 @@ export default class LibraryComponent extends React.Component {
       });
     }
     return (
+        // {examples.concat(
+        //   <Tabs.Panel title="Customise" key="custom">Todo Later</Tabs.Panel>
+        // )}
       <Tabs className="library--example-tabs">
-        {examples.concat(
-          <Tabs.Panel title="Customise" key="custom">Todo Later</Tabs.Panel>
-        )}
+        {examples}
       </Tabs>
     );
   }

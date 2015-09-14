@@ -1,6 +1,5 @@
 import React from 'react';
-import MastHead from '@economist/component-masthead';
-import EconomistLogo from '@economist/component-icon';
+//import MastHead from '@economist/component-masthead';
 
 export default class Library extends React.Component {
 
@@ -17,9 +16,10 @@ export default class Library extends React.Component {
       type: 'economist',
       size: '100%',
     };
+
     return (
       <div>
-        <MastHead title="Component Library" logo={logo}></MastHead>
+        //<MastHead title="Component Library" logo={logo} />
         <div className="Library--Sidebar">
         </div>
         <div className="Library--Main" role="main">{this.props.children}</div>
