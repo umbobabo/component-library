@@ -13,6 +13,17 @@ import Palette from '@economist/component-palette/index.js';
 import PalettePackage from '@economist/component-palette/package';
 import PaletteExample from '@economist/component-palette/example.js';
 
+import Typography from '@economist/component-typography';
+import TypographyPackage from '@economist/component-typography/package';
+import TypographySampleText from '@economist/component-typography/sampletext.es6';
+const TypographyFonts = [
+  [ 'body', '', 'Halifax Regular' ],
+  [ 'body', 'bold', 'Halifax Bold' ],
+  [ 'body', 'light', 'Halifax Light' ],
+  [ 'display', 'italic', 'FF Milo Serif Pro Med Italic' ],
+  [ 'display', '', 'FF Milo Serif Pro' ],
+];
+let TypographyCounter = 0;
 export default (
   <Library>
     <Component metadata={PalettePackage} component={Palette}>
@@ -80,6 +91,27 @@ export default (
           })}
         </div>
       </Tabs.Panel>
+    </Component>
+
+    <Component metadata={TypographyPackage} component={Typography} examples={false}>
+      {TypographyFonts.map((fontFamily) => {
+        const [ kind, modifier, family ] = fontFamily;
+        const classes = [
+          `example__${ kind }-text`,
+          modifier && `example__${ kind }-text--${ modifier }`,
+        ].join(' ');
+        const style = { fontFamily: family, maxHeight: '400px', overflow: 'scroll' };
+        return (
+          <Tabs.Panel title={family} key="typography-{TypographyCounter++}">
+            <h2>Sample for font-family: {fontFamily.join(' ')}</h2>
+            <div
+              className={classes}
+              style={style}
+              data-font={family.toLowerCase().replace(/ /g, '-')}
+            ><TypographySampleText /></div>
+          </Tabs.Panel>
+        );
+      })}
     </Component>
   </Library>
 );
