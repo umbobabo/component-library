@@ -43,26 +43,39 @@ export default (
     />
 
     <Component metadata={IconPackage} component={Icon}>
-      <Icon icon="facebook" />
-      <Icon icon="twitter" />
-      <Icon icon="googleplus" />
-      <Icon icon="linkedin" />
-      <Icon icon="whatsapp" />
-      <Icon icon="mail" />
-      <Icon icon="rss" />
-      <Icon icon="down" />
-      <Icon icon="up" />
-      <Icon icon="right" />
-      <Icon icon="left" />
-      <Icon icon="close" />
-      <Icon icon="worldif" />
-      <Icon icon="home" />
-      <Icon icon="hamburger" />
-      <Icon icon="user" />
-      <Icon icon="magnifier" />
-      <Icon icon="share" />
-      <Icon icon="economist-small"/>
-      <Icon icon="economist"/>
+      <p>Default version</p>
+      {Icon.options.icon.map((iconType) => {
+        const key = `default--${iconType}`;
+        return <Icon icon={iconType} key={key} />;
+      })}
+      <p>Rounded version</p>
+      {Icon.options.icon.map((iconType) => {
+        const key = `rounded--${iconType}`;
+        return (
+            <Icon icon={iconType} className="rounded" color="white"
+              background="black" key={key}
+            />);
+      })
+      }
+      <p>Icons in a background-image</p>
+      {Icon.options.icon.map((iconType) => {
+        const className = `icon icon--${iconType}`;
+        return (
+            <span className={className} key={className}>
+              Text for a11y and SEO purposes.
+            </span>);
+      })}
+
+      <div style={{ background: '#333' }}>
+      <p>Icons in a background-image</p>
+        {Icon.options.icon.map((iconType) => {
+          const className = `icon icon--${iconType}-london`;
+          return (
+              <span className={className} key={className}>
+                Text for a11y and SEO purposes.
+              </span>);
+        })}
+      </div>
     </Component>
   </Library>
 );

@@ -99,6 +99,7 @@
     "ghpages_files": "*.html *.css *.js assets/"
   },
   "scripts": {
+    "build": "babel index.es6 --stage=0 --loose > index.js",
     "ci": "./build.sh",
     "doc": "parallelshell 'npm run doc:html' 'npm run doc:js' 'npm run doc:css'",
     "doc:css": "cssnext --sourcemap example.css bundle.css",
@@ -112,7 +113,7 @@
     "pages": "git stash save -u pages-stash && git branch -D gh-pages; git checkout --orphan gh-pages && git add -f $npm_package_config_ghpages_files && git commit -anm'ghpages' && git push origin HEAD:gh-pages -f",
     "prepages": "npm run build && npm run doc",
     "prepublish": "babel . -d . -x .es6",
-    "prepublish:watch": "npm run prepublish -- -w",
+    "prepublish:watch": "npm run prepublish -- -w && browserify -d $npm_package_config_testbundle_opts",
     "pretest": "npm run lint",
     "provision": "devpack-configure ./package.json",
     "serve": "browser-sync start --server --files '*.{html,js}'",

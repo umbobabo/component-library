@@ -16,7 +16,6 @@ export default class Library extends React.Component {
       type: 'economist',
       size: '100%',
     };
-
     return (
       <div>
         <MastHead title="Component Library" logo={logo} />
