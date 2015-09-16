@@ -118,6 +118,7 @@
     "provision": "devpack-configure ./package.json",
     "serve": "browser-sync start --server --files '*.{html,js}'",
     "test": "karma start",
+    "test:base": "mocha -r babel/register -r @economist/component-testharness",
     "watch": "parallelshell 'npm run doc:watch' 'npm run prepublish:watch' 'npm run serve'"
   },
   "dependencies": {
@@ -130,6 +131,7 @@
   },
   "devDependencies": {
     "@economist/component-devpack": "latest",
+    "@economist/component-testharness": "latest",
     "babel": "^5.8.23",
     "babelify": "^6.3.0",
     "browser-sync": "^2.8.2",

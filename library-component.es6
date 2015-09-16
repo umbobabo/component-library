@@ -19,10 +19,8 @@ export default class LibraryComponent extends React.Component {
 
   renderExamples() {
     let examples = [];
-    console.log(this.props.examples);
     if (this.props.examples === false) {
       examples = this.props.children;
-      console.log
     } else if (this.props.children) {
       examples = [ (
         <Tabs.Panel title="Example">{this.props.children}</Tabs.Panel>
