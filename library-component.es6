@@ -19,7 +19,11 @@ export default class LibraryComponent extends React.Component {
 
   renderExamples() {
     let examples = [];
-    if (this.props.children) {
+    console.log(this.props.examples);
+    if (this.props.examples === false) {
+      examples = this.props.children;
+      console.log
+    } else if (this.props.children) {
       examples = [ (
         <Tabs.Panel title="Example">{this.props.children}</Tabs.Panel>
       ) ];
@@ -35,9 +39,6 @@ export default class LibraryComponent extends React.Component {
       });
     }
     return (
-        // {examples.concat(
-        //   <Tabs.Panel title="Customise" key="custom">Todo Later</Tabs.Panel>
-        // )}
       <Tabs className="library--example-tabs">
         {examples}
       </Tabs>

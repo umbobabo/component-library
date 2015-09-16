@@ -1,6 +1,7 @@
 import React from 'react';
 import Library from './';
 import Component from './library-component';
+import Tabs from 'react-simpletabs';
 
 import ImageCaption from '@economist/component-imagecaption';
 import ImageCaptionPackage from '@economist/component-imagecaption/package';
@@ -42,40 +43,43 @@ export default (
       }}
     />
 
-    <Component metadata={IconPackage} component={Icon}>
-      <p>Default version</p>
-      {Icon.options.icon.map((iconType) => {
-        const key = `default--${iconType}`;
-        return <Icon icon={iconType} key={key} />;
-      })}
-      <p>Rounded version</p>
-      {Icon.options.icon.map((iconType) => {
-        const key = `rounded--${iconType}`;
-        return (
-            <Icon icon={iconType} className="rounded" color="white"
-              background="black" key={key}
-            />);
-      })
-      }
-      <p>Icons in a background-image</p>
-      {Icon.options.icon.map((iconType) => {
-        const className = `icon icon--${iconType}`;
-        return (
-            <span className={className} key={className}>
-              Text for a11y and SEO purposes.
-            </span>);
-      })}
-
-      <div style={{ background: '#333' }}>
-      <p>Icons in a background-image</p>
+    <Component metadata={IconPackage} component={Icon} examples={false}>
+      <Tabs.Panel title="Default version" key="icon-1">
         {Icon.options.icon.map((iconType) => {
-          const className = `icon icon--${iconType}-london`;
+          const key = `default--${iconType}`;
+          return <Icon icon={iconType} key={key} />;
+        })}
+      </Tabs.Panel>
+      <Tabs.Panel title="Rounded version" key="icon-2">
+        {Icon.options.icon.map((iconType) => {
+          const key = `rounded--${iconType}`;
+          return (
+              <Icon icon={iconType} className="rounded" color="white"
+                background="black" key={key}
+              />);
+        })
+        }
+      </Tabs.Panel>
+      <Tabs.Panel title="Icon as a background image" key="icon-3">
+        {Icon.options.icon.map((iconType) => {
+          const className = `icon icon--${iconType}`;
           return (
               <span className={className} key={className}>
                 Text for a11y and SEO purposes.
               </span>);
         })}
-      </div>
+      </Tabs.Panel>
+      <Tabs.Panel title="Icon as a background image wit variation" key="icon-4">
+        <div style={{ background: '#333' }}>
+          {Icon.options.icon.map((iconType) => {
+            const className = `icon icon--${iconType}-london`;
+            return (
+                <span className={className} key={className}>
+                  Text for a11y and SEO purposes.
+                </span>);
+          })}
+        </div>
+      </Tabs.Panel>
     </Component>
   </Library>
 );
