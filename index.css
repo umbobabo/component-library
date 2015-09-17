@@ -1,9 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .library {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12),0 3px 1px -2px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background: white;
   margin: 2rem;
   font-family: sans-serif;
+}
+
+.library--wrapper {
+  display: table-row;
+}
+
+.library--sidebar {
+  width: 15%;
+  display: table-cell;
+  background-color: #121212;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  font-family: 'Halifax Regular';
+}
+
+.library--economist-logo {
+  margin: auto;
+  display: block;
+}
+
+.library--sidebar-link {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  float: none;
+  border-bottom: solid 1px grey;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.library--main {
+  width: 85%;
+  display: table-cell;
 }
 
 .library--title {
@@ -59,11 +99,12 @@
 
 .library--example-tabs .tabs-menu-item a {
   display: block;
-  padding: 0 40px;
+  padding: 0 10px;
   height: 50px;
   line-height: 50px;
   border-bottom: 0;
   color: #7A7A7A;
+  font-size: 18px;
 }
 
 .library--example-tabs .tabs-menu-item:not(.is-active) a:hover {

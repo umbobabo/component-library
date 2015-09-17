@@ -1,6 +1,7 @@
 node_modules/
 *.log
 *.js
-*.html
 bundle.css
+*.html
 npm-debug.log.*
+.DS_Store

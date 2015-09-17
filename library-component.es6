@@ -1,5 +1,4 @@
 import React from 'react';
-import Tabs from 'react-simpletabs';
 
 export default class LibraryComponent extends React.Component {
 
@@ -12,35 +11,8 @@ export default class LibraryComponent extends React.Component {
         homepage: React.PropTypes.string,
       }).isRequired,
       component: React.PropTypes.instanceOf(React.Component).isRequired,
-      examples: React.PropTypes.object,
       children: React.PropTypes.element,
     };
-  }
-
-  renderExamples() {
-    let examples = [];
-    if (this.props.children) {
-      examples = [ (
-        <Tabs.Panel title="Example">{this.props.children}</Tabs.Panel>
-      ) ];
-    } else {
-      examples = Object.keys(this.props.examples).map((title, key) => {
-        const exampleProps = this.props.examples[title];
-        const Component = this.props.component;
-        return (
-          <Tabs.Panel key={key} title={title}>
-            <Component {...exampleProps}/>
-          </Tabs.Panel>
-        );
-      });
-    }
-    return (
-      <Tabs className="library--example-tabs">
-        {examples.concat(
-          <Tabs.Panel title="Customise" key="custom">Todo Later</Tabs.Panel>
-        )}
-      </Tabs>
-    );
   }
 
   render() {
@@ -56,7 +28,7 @@ export default class LibraryComponent extends React.Component {
           <div className="library--description">
             {this.props.metadata.description}
           </div>
-          {this.renderExamples()}
+          {this.props.children}
         </div>
       </div>
     );
