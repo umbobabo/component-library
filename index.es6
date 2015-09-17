@@ -13,7 +13,7 @@ export default class Library extends React.Component {
     return (
       <div className="library--wrapper">
         <div className="library--sidebar">
-          <Icon icon="economist" size="120px" uri="/assets/icons.svg"
+          <Icon icon="economist" size="120px" uri="assets/icons.svg"
             className="library--economist-logo"
           />
           {this.props.children.map((child) => {
