@@ -6,6 +6,39 @@
   font-family: sans-serif;
 }
 
+.library--wrapper {
+  display: table-row;
+}
+
+.library--sidebar {
+  width: 15%;
+  display: table-cell;
+  background-color: #121212;
+  position: fixed;
+  height: 100%;
+}
+
+.library--economist-logo {
+  margin: auto;
+  display: block;
+}
+
+.library--sidebar-link {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  float: none;
+  border-bottom: solid 1px grey;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.library--main {
+  width: 85%;
+  display: table-cell;
+}
+
 .library--title {
   font-size: 1.25rem;
   font-weight: 500;
@@ -59,11 +92,12 @@
 
 .library--example-tabs .tabs-menu-item a {
   display: block;
-  padding: 0 40px;
+  padding: 0 10px;
   height: 50px;
   line-height: 50px;
   border-bottom: 0;
   color: #7A7A7A;
+  font-size: 18px;
 }
 
 .library--example-tabs .tabs-menu-item:not(.is-active) a:hover {

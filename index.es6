@@ -1,5 +1,5 @@
 import React from 'react';
-import MastHead from '@economist/component-masthead';
+import Icon from '@economist/component-icon';
 
 export default class Library extends React.Component {
 
@@ -10,18 +10,21 @@ export default class Library extends React.Component {
   }
 
   render() {
-    const logo = {
-      href: 'http://www.economist.com',
-      alt: 'The Economist',
-      type: 'economist',
-      size: '100%',
-    };
     return (
-      <div>
-        <MastHead title="Component Library" logo={logo} />
-        <div className="Library--Sidebar">
+      <div className="library--wrapper">
+        <div className="library--sidebar">
+          <Icon icon="economist" size="120px" uri="/assets/icons.svg"
+            className="library--economist-logo"
+          />
+          {this.props.children.map((child) => {
+            return (
+              <a href={`#${child.props.metadata.name}`}
+                className="library--sidebar-link"
+              >{child.props.component.name}</a>
+            );
+          })}
         </div>
-        <div className="Library--Main" role="main">{this.props.children}</div>
+        <div className="library--main" role="main">{this.props.children}</div>
       </div>
     );
   }
