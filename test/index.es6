@@ -1,6 +1,7 @@
 import Library from '../index.es6';
 import React from 'react/addons';
 
+const TestUtils = React.addons.TestUtils;
 describe(`The component library`, () => {
   describe(`it's a React component`, () => {
     it('is compatible with React.Component', () => {
@@ -12,22 +13,20 @@ describe(`The component library`, () => {
   });
   describe(`it provides a basic branded MastHead`, () => {
     it(`it have an Economist logo customisation`, () => {
-      // const renderer = TestUtils.createRenderer();
-      // result = renderer.getRenderOutput();
-      // result.type.should.equal('div');
-      // ('a').shoul.equal('a');
-      // {
-      //   href: 'http://www.economist.com',
-      //   alt: 'The Economist',
-      //   type: 'economist',
-      //   size: '100%',
-      // }
-      // expect(result.props.children).toEqual([
-      //   <MastHead title="Component Library" logo="" />
-      //   <div className="Library--Sidebar">
-      //   </div>
-      //   <div className="Library--Main" role="main">{this.props.children}</div>
-      // ]);
+      const shallowRenderer = TestUtils.createRenderer();
+      shallowRenderer.render(React.createElement(Library));
+
+      const shallowLibrary = shallowRenderer.getRenderOutput();
+      /* eslint-disable id-match */
+      shallowLibrary.props.children[0].props.should.be.deep.equal({
+        title: 'Component Library',
+        logo: {
+          href: 'http://www.economist.com',
+          alt: 'The Economist',
+          type: 'economist',
+          size: '100%',
+        },
+      });
     });
   });
 });
