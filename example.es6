@@ -100,7 +100,7 @@ export default (
           `example__${ kind }-text`,
           modifier && `example__${ kind }-text--${ modifier }`,
         ].join(' ');
-        const style = { fontFamily: family, maxHeight: '400px', overflow: 'scroll' };
+        const style = { fontFamily: family, maxHeight: '500px', overflow: 'scroll' };
         return (
           <Tabs.Panel title={family} key="typography-{TypographyCounter++}">
             <h2>Sample for font-family: {fontFamily.join(' ')}</h2>
