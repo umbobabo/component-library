@@ -11,6 +11,9 @@ import PaletteExample from '@economist/component-palette/example.js';
 import TypographyPackage from '@economist/component-typography/package.json';
 import TypographyExample from '@economist/component-typography/example.js';
 
+import GridPackage from '@economist/component-grid/package.json';
+import GridExample from '@economist/component-grid/example.js';
+
 export default (
   <Library>
     <Component metadata={PalettePackage}>
@@ -25,5 +28,8 @@ export default (
       {IconPackageExample}
     </Component>
 
+    <Component metadata={GridPackage}>
+      {GridExample}
+    </Component>
   </Library>
 );
