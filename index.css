@@ -48,33 +48,6 @@ html {
   display: table-cell;
 }
 
-@media (--viewport-medium) {
-  .library--sidebar-link {
-    display: none;
-  }
-  .library--sidebar {
-    display: block;
-    float: none;
-    width: 100%;
-    margin-bottom: 10px;
-    position: relative;
-    height: auto;
-  }
-  .library--main {
-    width: 100%;
-    display: block;
-  }
-  .library--economist-logo {
-    width: 60px;
-    height: 60px;
-  }
-  .library__typography .tab-panel {
-    max-height: 400px;
-    overflow: scroll;
-  }
-}
-
-
 .library--title {
   font-size: 1.25rem;
   font-weight: 500;
@@ -154,4 +127,36 @@ html {
 
 .library--example-tabs .tabs-panel.is-active {
   display: block;
+}
+
+@media (--viewport-medium) {
+  .library {
+    margin: 0;
+  }
+  .library--sidebar {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    height: auto;
+  }
+  .library--main {
+    width: 100%;
+    display: block;
+  }
+  .library--economist-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .library__typography .tab-panel {
+    max-height: 400px;
+    overflow: scroll;
+  }
+  .library .tab-panel {
+    padding: 10px 0px;
+  }
+  .library--example-tabs .tabs-navigation {
+    padding: 0;
+  }
 }
