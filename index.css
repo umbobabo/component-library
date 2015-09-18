@@ -149,7 +149,7 @@ html {
     width: 60px;
     height: 60px;
   }
-  .library__typography .tab-panel {
+  .library__Typography .tab-panel {
     max-height: 400px;
     overflow: scroll;
   }

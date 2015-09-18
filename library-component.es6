@@ -18,7 +18,7 @@ export default class LibraryComponent extends React.Component {
   render() {
     return (
       <div
-        className={`library  library__${this.props.component.name.toLowerCase()}`}
+        className={`library  library__${this.props.component.name}`}
       >
         <a className="library--heading"
           name={this.props.metadata.name} href={this.props.metadata.homepage}
