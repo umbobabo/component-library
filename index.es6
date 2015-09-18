@@ -20,7 +20,7 @@ export default class Library extends React.Component {
             return (
               <a href={`#${child.props.metadata.name}`}
                 className="library--sidebar-link"
-              >{child.props.component.name}</a>
+              >{child.props.metadata.name.replace('@economist\/component-', '')}</a>
             );
           })}
         </div>

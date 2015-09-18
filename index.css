@@ -1,6 +1,8 @@
 html {
   scroll-behavior: smooth;
 }
+/* Adding temporary basic responsiveness */
+@custom-media --viewport-medium (width <= 900px);
 
 .library {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12),0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -39,6 +41,7 @@ html {
   padding: 10px;
   box-sizing: border-box;
   font-size: 16px;
+  text-transform: capitalize;
 }
 
 .library--main {
@@ -52,6 +55,7 @@ html {
   line-height: 1.75rem;
   margin: 0;
   display: inline-block;
+  text-transform: capitalize;
 }
 
 .library--package-details {
@@ -81,7 +85,6 @@ html {
 
 .library--example-tabs .tabs-navigation {
   padding: 0 20px;
-  max-height: 50px;
   margin: 0 -1rem;
   border-bottom: 1px solid #7A7A7A;
 }
@@ -117,6 +120,7 @@ html {
   border-top: 2px solid #E60900;
   border-bottom: 0;
   color: #333;
+  box-sizing: border-box;
 }
 
 .library--example-tabs .tab-panel {
@@ -125,4 +129,36 @@ html {
 
 .library--example-tabs .tabs-panel.is-active {
   display: block;
+}
+
+@media (--viewport-medium) {
+  .library {
+    margin: 0;
+  }
+  .library--sidebar {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    height: auto;
+  }
+  .library--main {
+    width: 100%;
+    display: block;
+  }
+  .library--economist-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .library__typography .tab-panel {
+    max-height: 400px;
+    overflow: scroll;
+  }
+  .library .tab-panel {
+    padding: 10px 0px;
+  }
+  .library--example-tabs .tabs-navigation {
+    padding: 0;
+  }
 }
