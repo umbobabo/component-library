@@ -10,20 +10,20 @@ export default class LibraryComponent extends React.Component {
         description: React.PropTypes.string,
         homepage: React.PropTypes.string,
       }).isRequired,
-      component: React.PropTypes.instanceOf(React.Component).isRequired,
       children: React.PropTypes.element,
     };
   }
 
   render() {
+    const componentName = this.props.metadata.name.replace('@economist\/component-', '');
     return (
       <div
-        className={`library  library__${this.props.component.name}`}
+        className={`library  library__${componentName}`}
       >
         <a className="library--heading"
           name={this.props.metadata.name} href={this.props.metadata.homepage}
         >
-          <h1 className="library--title">{this.props.component.name}</h1>
+          <h1 className="library--title">{componentName}</h1>
           <h2 className="library--package-details">
             ({this.props.metadata.name}@{this.props.metadata.version})
           </h2>

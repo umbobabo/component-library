@@ -41,6 +41,7 @@ html {
   padding: 10px;
   box-sizing: border-box;
   font-size: 16px;
+  text-transform: capitalize;
 }
 
 .library--main {
@@ -54,6 +55,7 @@ html {
   line-height: 1.75rem;
   margin: 0;
   display: inline-block;
+  text-transform: capitalize;
 }
 
 .library--package-details {
@@ -149,7 +151,7 @@ html {
     width: 60px;
     height: 60px;
   }
-  .library__Typography .tab-panel {
+  .library__typography .tab-panel {
     max-height: 400px;
     overflow: scroll;
   }
