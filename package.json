@@ -138,7 +138,7 @@
     "@economist/component-palette": "^1.0.0",
     "@economist/component-typography": "^1.1.1",
     "react": "^0.14.0-rc",
-    "react-simpletabs": "^0.6.1",
+    "react-simpletabs": "pedronauck/react-simpletabs",
     "svg4everybody": "^2.0.0"
   },
   "devDependencies": {
