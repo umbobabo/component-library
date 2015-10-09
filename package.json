@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-library",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A library showing all Economist components",
   "author": "The Economist (http://economist.com)",
   "license": "MIT",
@@ -133,12 +133,10 @@
   "dependencies": {
     "@economist/component-grid": "^1.0.0",
     "@economist/component-icon": "^3.5.0",
-    "@economist/component-imagecaption": "^1.3.0",
-    "@economist/component-masthead": "^2.1.3",
     "@economist/component-palette": "^1.0.0",
     "@economist/component-typography": "^1.1.1",
-    "react": "^0.13.3",
-    "react-simpletabs": "^0.6.1",
+    "react": "^0.14.0-rc",
+    "react-simpletabs": "pedronauck/react-simpletabs",
     "svg4everybody": "^2.0.0"
   },
   "devDependencies": {
