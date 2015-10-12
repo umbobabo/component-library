@@ -2,34 +2,69 @@ import React from 'react';
 import Library from './';
 import Component from './library-component';
 
+import NavigationPackage from '@economist/component-navigation/package.json';
+import NavigationExample from '@economist/component-navigation/example.js';
+
 import IconPackage from '@economist/component-icon/package.json';
-import IconPackageExample from '@economist/component-icon/example.js';
+import IconExample from '@economist/component-icon/example.js';
 
 import PalettePackage from '@economist/component-palette/package.json';
 import PaletteExample from '@economist/component-palette/example.js';
 
-import TypographyPackage from '@economist/component-typography/package.json';
-import TypographyExample from '@economist/component-typography/example.js';
-
 import GridPackage from '@economist/component-grid/package.json';
 import GridExample from '@economist/component-grid/example.js';
 
+import TeaserPackage from '@economist/component-teaser/package.json';
+import TeaserExample from '@economist/component-teaser/example.js';
+
+import TeaserListPackage from '@economist/component-teaser-list/package.json';
+import TeaserListExample from '@economist/component-teaser-list/example.js';
+
+import FooterPackage from '@economist/component-footer/package.json';
+import FooterExample from '@economist/component-footer/example.js';
+
+import CookieMessagePackage from '@economist/component-cookie-message/package.json';
+import CookieMessageExample from '@economist/component-cookie-message/example.js';
+
+import AdPanelPackage from '@economist/component-ad-panel/package.json';
+import AdPanelExample from '@economist/component-ad-panel/example.js';
+
 export default (
   <Library>
+    <Component metadata={NavigationPackage}>
+      {NavigationExample}
+    </Component>
+
     <Component metadata={PalettePackage}>
       {PaletteExample}
     </Component>
 
-    <Component metadata={TypographyPackage}>
-      {TypographyExample}
-    </Component>
-
     <Component metadata={IconPackage}>
-      {IconPackageExample}
+      {IconExample}
     </Component>
 
     <Component metadata={GridPackage}>
       {GridExample}
+    </Component>
+
+    <Component metadata={TeaserPackage}>
+      {TeaserExample}
+    </Component>
+
+    <Component metadata={TeaserListPackage}>
+      {TeaserListExample}
+    </Component>
+
+    <Component metadata={FooterPackage}>
+      {FooterExample}
+    </Component>
+
+    <Component metadata={CookieMessagePackage}>
+      {CookieMessageExample}
+    </Component>
+
+    <Component metadata={AdPanelPackage}>
+      {AdPanelExample}
     </Component>
   </Library>
 );
