@@ -10,7 +10,7 @@ export default class LibraryComponent extends React.Component {
         description: React.PropTypes.string,
         homepage: React.PropTypes.string,
       }).isRequired,
-      children: React.PropTypes.element,
+      children: React.PropTypes.arrayOf(React.PropTypes.element),
     };
   }
 

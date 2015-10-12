@@ -5,7 +5,7 @@ export default class Library extends React.Component {
 
   static get propTypes() {
     return {
-      children: React.PropTypes.element,
+      children: React.PropTypes.arrayOf(React.PropTypes.element),
     };
   }
 
@@ -13,13 +13,14 @@ export default class Library extends React.Component {
     return (
       <div className="library--wrapper">
         <div className="library--sidebar">
-          <Icon icon="economist" size="120px" uri="assets/icons.svg"
+          <Icon icon="economist" size="60px" uri="assets/icons.svg"
             className="library--economist-logo"
           />
           {this.props.children.map((child) => {
             return (
               <a href={`#${child.props.metadata.name}`}
                 className="library--sidebar-link"
+                key={`${child.props.metadata.name}-menu`}
               >{child.props.metadata.name.replace('@economist\/component-', '')}</a>
             );
           })}
