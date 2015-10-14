@@ -135,7 +135,7 @@
     "@economist/component-teaser": "^1.0.3",
     "@economist/component-teaser-list": "^1.0.1",
     "@economist/component-typography": "^1.1.1",
-    "react": "^0.14.0-rc||^0.14.0",
+    "react": "^0.14.0",
     "svg4everybody": "^2.0.0"
   },
   "devDependencies": {
