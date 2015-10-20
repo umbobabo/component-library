@@ -1,6 +1,8 @@
 #!/bin/bash
 
 SSH_KEY=${1:-/root/.ssh/id_rsa}
+HOST_IP=$(ip route get 1 | awk '{print $NF;exit}')
+SINOPIA_URL="http://${HOST_IP}:4873"
 
 [[ ${NPM_TOKEN:-} = '' ]] && { echo "NPM_TOKEN empty"; exit 1; }
 [[ ${SAUCE_ACCESS_KEY:-} = '' ]] && { echo "SAUCE_ACCESS_KEY empty"; exit 2; }
@@ -17,6 +19,7 @@ exec docker run \
         cd /code && \
         umask 000 && \
         printf \"@economist:registry=https://registry.npmjs.org/\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}\n\" > ~/.npmrc && \
+        (curl -I ${SINOPIA_URL} --max-time 5 && npm set registry ${SINOPIA_URL} && echo \"Using sinopia cache registry available on ${SINOPIA_URL}\" || true) && \
         npm i && \
         echo npm run doc:js
         echo SAUCE_USER=${SAUCE_USER} SAUCE_ACCESS_KEY=${SAUCE_ACCESS_KEY} npm t && \
