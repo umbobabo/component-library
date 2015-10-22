@@ -5,4 +5,4 @@ bundle.css
 *.html
 npm-debug.log.*
 .DS_Store
-
+!karma.conf.js
