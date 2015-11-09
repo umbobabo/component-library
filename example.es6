@@ -29,6 +29,9 @@ import CookieMessageExample from '@economist/component-cookie-message/example.js
 import AdPanelPackage from '@economist/component-ad-panel/package.json';
 import AdPanelExample from '@economist/component-ad-panel/example.js';
 
+import HeaderPackage from '@economist/component-header/package.json';
+import HeaderExample from '@economist/component-header/example.js';
+
 export default (
   <Library>
     <Component metadata={NavigationPackage}>
@@ -65,6 +68,10 @@ export default (
 
     <Component metadata={AdPanelPackage}>
       {AdPanelExample}
+    </Component>
+
+    <Component metadata={HeaderPackage}>
+      {HeaderExample}
     </Component>
   </Library>
 );
