@@ -7,7 +7,7 @@ body {
 @import '@economist/component-palette';
 @import '@economist/component-palette/example.css';
 @import '@economist/component-grid/example.css';
-@import '@economist/component-typography/example.css';
+@import '@economist/component-typography/index.css';
 @import '@economist/component-navigation/example.css';
 @import '@economist/component-teaser/example.css';
 @import '@economist/component-teaser-list/example.css';
@@ -16,3 +16,4 @@ body {
 @import '@economist/component-ad-panel/index.css';
 @import '@economist/component-header/index.css';
 @import '@economist/component-header/blogCustomisation.css';
+@import '@economist/component-subscribe-message/index.css';

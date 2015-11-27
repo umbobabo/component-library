@@ -32,6 +32,9 @@ import AdPanelExample from '@economist/component-ad-panel/example.js';
 import HeaderPackage from '@economist/component-header/package.json';
 import HeaderExample from '@economist/component-header/example.js';
 
+import SubscribeMessagePackage from '@economist/component-subscribe-message/package.json';
+import SubscribeMessageExample from '@economist/component-subscribe-message/example.js';
+
 export default (
   <Library>
     <Component metadata={NavigationPackage}>
@@ -64,6 +67,10 @@ export default (
 
     <Component metadata={CookieMessagePackage}>
       {CookieMessageExample}
+    </Component>
+
+    <Component metadata={SubscribeMessagePackage}>
+      {SubscribeMessageExample}
     </Component>
 
     <Component metadata={AdPanelPackage}>
