@@ -9,6 +9,12 @@ export default class Library extends React.Component {
     };
   }
 
+  static get defaultProps() {
+    return {
+      children: [],
+    };
+  }
+
   render() {
     return (
       <div className="library--wrapper">
