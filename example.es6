@@ -35,6 +35,13 @@ import HeaderExample from '@economist/component-header/example.js';
 import SubscribeMessagePackage from '@economist/component-subscribe-message/package.json';
 import SubscribeMessageExample from '@economist/component-subscribe-message/example.js';
 
+import LinkButtonPackage from '@economist/component-link-button/package.json';
+import LinkButtonExample from '@economist/component-link-button/example.js';
+
+import BalloonPackage from '@economist/component-balloon/package.json';
+import BalloonExample from '@economist/component-balloon/example.js';
+
+
 export default (
   <Library>
     <Component metadata={NavigationPackage}>
@@ -47,6 +54,14 @@ export default (
 
     <Component metadata={IconPackage}>
       {IconExample}
+    </Component>
+
+    <Component metadata={LinkButtonPackage}>
+      {LinkButtonExample}
+    </Component>
+
+    <Component metadata={BalloonPackage}>
+      {BalloonExample}
     </Component>
 
     <Component metadata={GridPackage}>
