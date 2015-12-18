@@ -1,57 +1,49 @@
+@import "@economist/component-palette";
+@import "@economist/component-typography";
+
 html {
   scroll-behavior: smooth;
 }
 /* Adding temporary basic responsiveness */
-@custom-media --viewport-medium (width <= 35rem);
-@custom-media --viewport-big (width >= 36rem);
+@custom-media --viewport-medium (width <= 762px);
+@custom-media --viewport-big (width >= 763px);
 
 .library {
   background: white;
   margin: 0;
   font-family: sans-serif;
+  position: relative;
+  min-height: 90vh;
 }
 
-@media (--viewport-big) {
-  .library {
-    padding: 1rem;
-  }
+.anchor {
+  position: absolute;
+  top: -62px;
 }
 
-.library--wrapper {
-  display: table-row;
+/*.library:first-child .anchor {
+  top: -20px;
+  border: solid green 1px;
+}*/
+
+
+
+#mfPreviewBar {
+  display: none;
 }
 
 .library--sidebar {
-  width: 15%;
-  display: table-cell;
-  background-color: #121212;
-  position: fixed;
-  height: 100%;
-  top: 0;
+  background-color: var(--color-kiev);
   font-family: 'Halifax Regular';
+  min-width: 200px;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
 }
 
 .library--economist-logo {
-  margin: 15px auto;
+  float: left;
   display: block;
-}
-
-.library--sidebar-link {
-  color: white;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  float: none;
-  border-bottom: solid 1px grey;
-  padding: 10px;
-  box-sizing: border-box;
-  font-size: 16px;
-  text-transform: capitalize;
-}
-
-.library--main {
-  width: 85%;
-  display: table-cell;
 }
 
 .library--title {
@@ -96,7 +88,7 @@ html {
 }
 
 .library--example-wrapper {
-  margin: 1rem 0;
+  padding: 1rem;
 }
 
 .library--example-tabs {
@@ -151,17 +143,19 @@ html {
   display: block;
 }
 
+.library__component-list {
+  margin: 0.7em;
+  font-size: var(--text-size-step-1);
+  text-transform: capitalize;
+}
+
+.library--main {
+  padding-top: 62px;
+}
+
 @media (--viewport-medium) {
   .library {
     margin: 0;
-  }
-  .library--sidebar {
-    display: block;
-    float: none;
-    width: 100%;
-    margin-bottom: 10px;
-    position: relative;
-    height: auto;
   }
   .library--main {
     width: 100%;
@@ -181,4 +175,13 @@ html {
   .library--example-tabs .tabs-navigation {
     padding: 0;
   }
+  /* No mobile version for this component */
+  .library__sections-card {
+    display: none;
+  }
+}
+
+.library--description {
+  margin-bottom: 15px;
+  font-size: 16px;
 }
