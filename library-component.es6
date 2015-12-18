@@ -19,9 +19,9 @@ export default class LibraryComponent extends React.Component {
     return (
       <div
         className={`library  library__${componentName}`}
-      >
+      ><a className="anchor" name={this.props.metadata.name} />
         <a className="library--heading"
-          name={this.props.metadata.name} href={this.props.metadata.homepage}
+          href={this.props.metadata.homepage}
         >
           <h1 className="library--title">{componentName}</h1>
           <h2 className="library--package-details">

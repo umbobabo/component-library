@@ -20,3 +20,6 @@ body {
 @import '@economist/component-link-button/index.css';
 @import '@economist/component-balloon/index.css';
 @import '@economist/component-balloon/example.css';
+@import '@economist/component-accordion/index.css';
+@import '@economist/component-accordion/styles.css';
+@import '@economist/component-sections-card/index.css';

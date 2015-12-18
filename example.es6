@@ -41,6 +41,12 @@ import LinkButtonExample from '@economist/component-link-button/example.js';
 import BalloonPackage from '@economist/component-balloon/package.json';
 import BalloonExample from '@economist/component-balloon/example.js';
 
+import AccordionPackage from '@economist/component-accordion/package.json';
+import AccordionExample from '@economist/component-accordion/example.js';
+
+import SectionsCardPackage from '@economist/component-sections-card/package.json';
+import SectionsCardExample from '@economist/component-sections-card/example.js';
+
 
 export default (
   <Library>
@@ -80,6 +86,10 @@ export default (
       {FooterExample}
     </Component>
 
+    <Component metadata={SectionsCardPackage}>
+      {SectionsCardExample}
+    </Component>
+
     <Component metadata={CookieMessagePackage}>
       {CookieMessageExample}
     </Component>
@@ -94,6 +104,10 @@ export default (
 
     <Component metadata={HeaderPackage}>
       {HeaderExample}
+    </Component>
+
+    <Component metadata={AccordionPackage}>
+      {AccordionExample}
     </Component>
   </Library>
 );
